@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
-})->middleware('auth:sanctum');
+// })->middleware('auth:sanctum');
 
-Route::middleware((['auth:sanctum']))->group(function () {
+// Route::middleware((['auth:sanctum']))->group(function () {
     Route::post('logout', [AuthController::class, 'logout']);
     Route::resource('kategori', Kategoricontroller::class);
     Route::resource('genre', Genrecontroller::class);
